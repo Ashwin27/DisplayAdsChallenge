@@ -2,7 +2,7 @@
 ##
 ## Author: Ashwin Raman
 ##
-## Last Edited: 28th Jan 2016
+## Last Edited: 29th Jan 2016
 ########################################
 
 import os
@@ -25,9 +25,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.cross_validation import train_test_split
 from sklearn import metrics 
 
-dir = os.path.dirname(__file__)
-
-data = pd.read_csv(dir + '/home/ashwin/Academics/Machine-Learning/Display-Ads/Data/dac_sample.txt', sep='\t', header=None)
+data = pd.read_csv('/home/ashwin/Academics/Machine-Learning/Display-Ads/Data/dac_sample.txt', sep='\t', header=None)
 #print data.head()
 
 enc = LabelEncoder()
@@ -57,7 +55,7 @@ y = data.ix[:, 0]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1)
 
-knn = KNeighborsClassifier(n_neighbors=50)
+knn = KNeighborsClassifier(n_neighbors=10)
 knn.fit(X_train, y_train)
 
 y_pred = knn.predict(X_test)
