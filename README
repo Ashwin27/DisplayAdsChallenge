@@ -1,0 +1,15 @@
+Python Prerequisities:
+1. numpy
+2. scikit
+3. matplotlib
+4. pandas
+5. seaborn
+6. SciPy
+
+Results:
+1. K nearest neighbors
+	- 1 : 67%
+	- 2 : 76%
+	- 5 : 72%
+	- 10: 77%
+	- 50: 77%
